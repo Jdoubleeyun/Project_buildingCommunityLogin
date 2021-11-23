@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="Building Community">
+    <meta property="og:description" content="Building Community를 같이 Build합시다.">
+    <meta property="og:image" content="images/building3.png">
+    <link href="https://fonts.googleapis.com/css2?family=family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/basic.js"></script>
+
+    <title>전체 게시물 조회 페이지</title>
+</head>
+<body>
+<div class="header" style="position:relative;">
+    <div id="header-title-login-user">
+        <span th:text="${username}"></span> 님의
+    </div>
+    <div id="header-title-select-shop">
+        Building Community
+    </div>
+
+    <form id="my_form" method="post" action="/user/logout">
+        <a id="logout-text" href="javascript:{}" onclick="document.getElementById('my_form').submit();">로그아웃</a>
+    </form>
+</div>
+<div id = "board-area" class="area-write">
+    <div class="mb-3-row">
+        <label for="board-username" class="col-sm-2 col-form-label">작성자명 : </label>
+        <div id="board-username">
+            <span th:text="${username}"></span>
+        </div>
+    </div>
+    <div class="mb-3-row">
+        <label for="board-title" class="col-sm-2 col-form-label">제 목 : </label>
+        <input class="field" type="text"  id="board-title" placeholder="제목을 입력해주세요">
+    </div>
+    <textarea class="field" placeholder="게시글을 입력해주세요" name="contents" id="board-contents" cols="30"
+              rows="10"></textarea>
+    <button onclick="writePost()" type="button" class="icon-end-edit btn btn-outline-success">글쓰기</button>
+</div>
+<div id="boardList-area" class="area-read">
+    <div class="card">
+        <div class="metadata">
+            <div class="date">
+                October 10, 2020
+            </div>
+            <div id="1-username" class="username">
+                anonymous
+            </div>
+        </div>
+        <div class="title">
+            <div id="1-title" class="text">
+                dsafnkalfklewakflekelafkleajfkleafkldsa
+            </div>
+        </div>
+        <div class ="modal">
+            <div id="1-submit" onclick="execSearch('1')" class="modal-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
