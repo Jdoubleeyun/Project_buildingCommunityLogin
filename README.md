@@ -7,7 +7,7 @@
 👨‍💻안지윤
 
 💻프론트엔드
-- html (typleaf)
+- html (thymeleaf)
 - css
 - javascript(jquery) 
   
