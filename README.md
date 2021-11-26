@@ -1,5 +1,5 @@
 # Project_buildingCommunityLogin
-# 개인 프로젝트 'BUildingCommunity를 Build 하자'
+# 개인 프로젝트 'BuildingCommunity를 Build 하자'
 웹사이트 주소: http://jdoubleeyun.shop (서버 내림)   
 ### 건물의 건의사항을 BuildingCommunity에 Build 해보세요!
 
